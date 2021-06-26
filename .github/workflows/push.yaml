@@ -8,17 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: npm install
-        uses: actions/npm@master
-        with:
-          args: install
+        run: npm install
       - name: npm test
-        uses: actions/npm@master
-        with:
-          args: run test
+        run: npm test
       - name: npm lint
-        uses: actions/npm@master
-        with:
-          args: run lint
+        run: npm lint
       - name: docker build
         run: build -t rv/github-cicd-eks .
       - name: docker login
