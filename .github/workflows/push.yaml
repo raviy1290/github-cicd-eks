@@ -25,5 +25,6 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
+          working-directory: ./myapp
           push: true
           tags: raviverma/repo1:latest
