@@ -20,4 +20,4 @@ jobs:
       - name: docker login
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME}} --password-stdin
       - name: dockerhub push
-        run : docker push raviverma/repo1
+        run : docker push raviverma/repo1:rv-github-cicd-eks
